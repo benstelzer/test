@@ -4,11 +4,11 @@ export class MainController {
   public todos: ITodo[];
 
 
-  public createTask() {
-    this.TodoService.create(this.todo).then (() => {
 
-      this.$state.go("main");
-    } );
+  public createTask() {
+    this.TodoService.create(this.todo);
+    this.todos.push(<ITodo>this.todo);
+    this.todo;
 
   }
 
@@ -26,8 +26,8 @@ export class MainController {
     private $state:ng.ui.IStateService,
   private $stateParams: ng.ui.IStateParamsService) {
 
-      this.todo = this.TodoService.getOne($stateParams["id"])
-      this.todos = TodoService.getAll();
+
+this.todos = TodoService.getAll();
 
 
 
