@@ -1,0 +1,41 @@
+<form>
+        <br>
+        <div class="well container" style="text-align: center">
+            <div style="width: 30%; display: inline-block;">
+                <label>Name of Task</label>
+                <input type="text" ng-model="vm.todo.task" class="form-control" />
+            </div>
+            <div style="width: 30%; display: inline-block;">
+                <label>Status</label>
+                <select type="text" ng-model="vm.todo.status" class="form-control">
+                    <option value="Complete">Done</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Incomplete">Incomplete</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="btn btn-info" ng-click="vm.createTask()" />Add +</button>
+            </div>
+
+
+
+            <table class="table table-bordered table table-striped">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Status</th>
+                        <th>Buttons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="t in vm.todo">
+                        <td> {{t.task}} </td>
+                        <td> {{t.status}} </td>
+                        <td>
+                            <button class="btn btn-danger" ng-click="vm.remove(t)"> Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
