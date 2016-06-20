@@ -1,10 +1,10 @@
 import * as mongoose from 'mongoose';
 
-export interface ITestingModel extends ITesting, mongoose.Document { }
+export interface ITodoModel extends ITodo, mongoose.Document { }
 
-let testingSchema = new mongoose.Schema({
+let todoSchema = new mongoose.Schema({
   task: String,
   status: String,
 });
 
-export let Testing = mongoose.model('Testing', testingSchema);
+export let Todo = mongoose.model('Todo', todoSchema);

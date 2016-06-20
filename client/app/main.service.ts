@@ -43,7 +43,7 @@ public create(todo:ITodo) {
     )
 
     {
-        this.TodoResource = <ITodoResource>$resource("/api/v1/todo/:id", null, { "update": { "method": "PUT" } })
+        this.TodoResource = <ITodoResource>$resource("/api/v1/testing/:id", null, { "update": { "method": "PUT" } })
 
 
 

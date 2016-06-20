@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/testing';
 
 // mongoose connection
-require('./api/testing/testing.model');
+require('./api/testing.model');
 mongoose.connect(MONGO_URL, (err) => {
     if (err) console.error(err);
     else console.log(`Connected to ${MONGO_URL}`);
@@ -24,7 +24,7 @@ app.get('/', (req, res, next) => {
     res.sendFile(config.client + '/index.html');
 });
 
-app.use('/api/v1/testing', require('./api/testing/testing.routes'));
+app.use('/api/v1/testing', require('./api/testing.routes'));
 
 // if path starts with /client, /bower_components, or /api, send a 404
 app.get(/\/(client|bower_components|api).{0,}/, (req, res, next) => {
