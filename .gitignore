@@ -1,0 +1,8 @@
+*.js
+!*.spec.js
+
+/node_modules
+/bower_components
+/typings
+
+.env

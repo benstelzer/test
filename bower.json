@@ -1,0 +1,17 @@
+{
+  "name": "testing",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "benstelzer <benstelzer@berkeley.edu>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
